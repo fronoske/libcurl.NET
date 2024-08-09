@@ -4,6 +4,7 @@
  *
  * Copyright (c) 2004, 2005 Jeff Phillips (jeff@jeffp.net)
  *               2016 Patrick Quirk
+ *               2024 Tsuyoshi Arai
  *
  * This software is licensed as described in the file LICENSE.md, which you
  * should have received as part of this distribution.
@@ -20,11 +21,11 @@
 using System.Reflection;
 
 [assembly: AssemblyCompany("Seaside Research")]
-[assembly: AssemblyCopyright("Copyright (c) 2005, 2016 Jeff Phillips, Patrick Quirk")]
+[assembly: AssemblyCopyright("Copyright (c) 2005, 2016, 2024 Jeff Phillips, Patrick Quirk, Tsuyoshi Arai")]
 [assembly: AssemblyProduct("libcurl.NET")]
-[assembly: AssemblyInformationalVersion("1.4.1.0")]
-[assembly: AssemblyFileVersion("1.4.1.0")]
-[assembly: AssemblyVersion("1.4.1.0")]
+[assembly: AssemblyInformationalVersion("1.4.2.0")]
+[assembly: AssemblyFileVersion("1.4.2.0")]
+[assembly: AssemblyVersion("1.4.2.0")]
 [assembly: AssemblyTitle("libcurl.NET by Jeff Phillips")]
 [assembly: AssemblyDescription("libcurl binding for .NET")]
 [assembly: AssemblyCulture("")]
