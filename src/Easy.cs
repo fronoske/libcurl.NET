@@ -960,7 +960,7 @@ namespace SeasideResearch.LibCurlNet
             // Support UTF-8 (.NET could use Marshal.PtrToStringUTF8() but the target framework of this library is .NET Framework)
             byte[] bytes = new byte[msgBufSize];
             Marshal.Copy(msgBuf, bytes, startIndex: 0, msgBufSize);
-            String message = Encoding.GetEncoding("UTF-8").GetString(bytes);
+            String message = System.Text.Encoding.GetEncoding("UTF-8").GetString(bytes);
 
             easy.m_pfDebug(infoType, message, easy.m_debugData);
             return 0;
