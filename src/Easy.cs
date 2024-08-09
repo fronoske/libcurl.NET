@@ -956,7 +956,12 @@ namespace SeasideResearch.LibCurlNet
                 return 0;
             if (easy.m_pfDebug == null)
                 return 0;
-            String message = Marshal.PtrToStringAnsi(msgBuf, msgBufSize);
+
+            // Support UTF-8 (.NET could use Marshal.PtrToStringUTF8() but the target framework of this library is .NET Framework)
+            byte[] bytes = new byte[msgBufSize];
+            Marshal.Copy(msgBuf, bytes, startIndex: 0, msgBufSize);
+            String message = Encoding.GetEncoding("UTF-8").GetString(bytes);
+
             easy.m_pfDebug(infoType, message, easy.m_debugData);
             return 0;
         }
